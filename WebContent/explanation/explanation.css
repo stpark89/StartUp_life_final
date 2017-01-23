@@ -1,0 +1,64 @@
+@CHARSET "UTF-8";
+#exp_ban {
+   position:relative;
+   width:100%;
+   height:400px;
+   background:url(../img/ban00.jpg) no-repeat center -420px;   
+}
+
+#explanation {
+   position:relative;
+   width:100%;
+   max-width:1000px;
+   height:700px;
+   margin:0 auto;   
+   /*background-color:#993;*/
+}
+
+#explanation>h1 {
+   position:relative;
+   width:100%;
+   height:120px;
+   font-size:30px;
+   font-weight:bold;
+   line-height:150px;
+   text-align:center
+}
+
+#explanation>hr {
+   position:relative;
+   width:50px;
+   border:2px solid #000;
+   margin:0 auto 50px;
+}
+
+#explanation>p {
+   position:relative;
+   text-align:center;
+   line-height:30px;
+   margin-bottom:50px;   
+}
+
+#explanation>ul {
+   width:100%;
+   height:200px;
+      
+}
+
+#explanation>ul li {
+   width:33.33333333%;
+   height:100%;
+      
+}
+
+#explanation>ul li>p {
+   text-align:center;
+   font:bold 20px Nanum;   
+}
+
+#explanation>ul li img {
+   position:relative;
+   left:50%;
+   transform:translateX(-50%);
+   width:150px;   
+}

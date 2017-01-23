@@ -1,0 +1,409 @@
+@charset "utf-8";
+/* CSS Document */
+
+#basicInfo {
+	position:relative;
+	top:50px;
+	width:100%;
+	max-width:1300px;
+	height:900px;
+	margin:0 auto;	
+}
+
+.infoTitle {
+	position:relative;
+	width:100%;
+	height:30px;
+	font-weight:bold;	
+	border-bottom:1px solid #333;
+	box-sizing:border-box;
+}
+
+#basicInfo>img {
+	position:relative;
+	top:25px;
+	left:50%;
+	transform:translateX(-50%);
+}
+
+#info {
+	position:relative;
+	top:50px;
+	left:0;
+	width:100%;
+	height:auto;	
+}
+
+#info th {
+	background-color:#333;
+	border-top:1px dotted #999;
+	box-sizing:border-box;
+	width:25%;
+	height:50px;
+	color:#fff;
+}
+
+#info td {
+	width:25%;
+	height:50px;
+	border-top:1px dotted #999;
+	box-sizing:border-box;
+	padding-left:20px;
+}
+
+#info tr:last-child>td {
+	border-bottom:1px dotted #999;
+}
+
+/*법안발의*/
+#bill {
+	position:relative;
+	width:100%;
+	max-width:1300px;
+	height:500px;
+	margin:0 auto;	
+	/*background-color:#9C9;*/
+}
+
+#bill>div {
+	position:relative;
+	width:95%;
+	height:290px;
+	top:0;
+	left:0;	
+	margin:30px auto;
+	overflow:hidden;
+}
+
+#bill_table {
+	position:relative;
+	width:100%;
+	height:290px;
+	top:0;
+	left:0;	
+	overflow:hidden;
+}
+
+#bill_table th, #bill_table td {
+	width:15%;	
+	height:40px;
+	text-align:center;
+}
+
+#bill_table th {
+	background-color:#333;
+	color:#fff;	
+	text-align:center !important;
+}
+
+#bill_table td {
+	border-bottom:1px dotted #ccc;
+	box-sizing:border-box;
+	height:50px;
+}
+
+#bill_table th:nth-child(2), #bill_table td:nth-child(2) {
+	width:55%;
+	text-align:left;	
+}
+
+#bill button {
+	position:relative;
+	width:200px;
+	height:50px;
+	left:50%;
+	transform:translateX(-50%);
+	background-color:#fff;
+	border:1px solid #ccc;
+	box-sizing:border-box;
+	border-radius:5px;
+	font:bold 18px Nanum;
+	color:#666;
+	cursor:pointer;
+}
+
+/*상임위원회 활동*/
+
+#attendance {
+	position:relative;
+	width:100%;
+	max-width:1300px;
+	height:700px;
+	margin:0 auto;
+	/*background-color:#99F;*/
+}
+
+#attendance>h2 {
+	position:relative;
+	width:100%;
+	height:100px;
+	text-align:center;
+	font:bold 20px/100px Nanum;	
+}
+
+#attendance>article {
+	position:relative;
+	width:100%;
+	height:100px;	
+}
+
+#attendance>article>h3 {
+	position:relative;
+	width:100%;
+	height:50px;
+	text-align:center;
+	line-height:50px;	
+}
+
+#attendance>article>h3 span {
+	color:#F00;
+	font-weight:bold;
+}	
+
+#progress {
+	position:relative;
+	width:70%; 
+	height:50px;
+	background-color:#ccc;
+	margin:0 auto;	
+}
+
+#progress>div {
+	position:relative;
+	top:0;
+	left:0;
+	width:0%;
+	height:100%;
+	background-color:#39F;	
+}
+
+
+#attendance>div {
+	position:relative;
+	width:95%;
+	height:500px;
+	top:0;
+	left:0;	
+	margin:50px auto;
+	overflow:hidden;
+}
+
+#attendance_table {
+	position:relative;
+	width:100%;
+	height:auto;	
+}
+
+#attendance_table>tbody th, #attendance_table>tbody td {
+	width:25%;
+	height:50px;
+	text-align:center;	
+}
+
+#attendance_table>tbody tr:first-child th {
+	height:40px !important;	
+	background-color:#333;
+	color:#fff;
+}
+
+#attendance_table>tbody>tr>td {
+	border-bottom:1px dotted #ccc;
+	box-sizing:border-box;	
+}
+
+#attendance_table>tfoot tr td {
+	position:relative;
+	height:70px;	
+		
+}
+
+#attendance_table>tfoot ul {
+	position:absolute;
+	top:50%;
+	left:50%;
+	transform:translate(-50%,-50%);
+	width:150px;
+	height:30px;
+	border:1px solid #ccc;
+	box-sizing:border-box;	
+}
+
+#attendance_table>tfoot ul li {
+	width:20%;
+	height:100%;
+	text-align:center;
+	line-height:30px;	
+	border-right:1px solid #ccc;
+	box-sizing:border-box;	
+	cursor:pointer;
+}
+
+#attendance_table>tfoot ul li:first-child {
+	background-color:#333;
+	color:#fff;	
+}
+
+#attendance_table>tfoot ul li:last-child {
+	border:0;	
+}
+
+.attendance { /*출석일경우*/
+	color:#09F;
+}
+
+.absence { /*결석일경우*/
+	color:#F30;
+}
+
+/*본회의활동*/
+#activity {
+	position:relative;
+	width:100%;
+	max-width:1300px;
+	height:700px;
+	/*background-color:#996;*/
+	margin:0 auto;	
+}
+
+#activity>h2 {
+	position:relative;
+	width:100%;
+	height:100px;
+	text-align:center;
+	font:bold 20px/100px Nanum;	
+}
+
+#activity>h2 span {
+	color:#C00;
+		
+}
+
+#active_progress {
+	position:relative;
+	width:70%;
+	height:50px;
+	background-color:#ccc;
+	margin:0 auto;	
+}
+
+#active_progress>div {
+	position:relative;
+	top:0;
+	left:0;
+	width:87.5%;
+	height:100%;
+	background-color:#39F;	
+}
+
+#activity>div:last-of-type {
+	position:relative;
+	width:95%;
+	height:500px;
+	top:0;
+	left:0;	
+	margin:50px auto;
+	overflow:hidden;
+}
+
+/*선거정보*/  
+
+#election {
+	position:relative;
+	width:100%;
+	max-width:1300px;
+	height:400px;
+	margin:0 auto;
+	/*background-color:#99F;*/
+}
+
+#election>h2 {
+	position:relative;
+	width:100%;
+	height:100px;
+	text-align:center;
+	font:bold 20px/100px Nanum;	
+}
+
+#election>h2 span {
+	color:#C00;
+		
+}
+
+#election>p {
+	position:relative;
+	width:100%;
+	height:50px;
+	line-height:50px;
+	text-align:center;	
+}
+
+#election_progress {
+	position:relative;
+	width:70%;
+	height:50px;
+	background-color:#ccc;
+	margin:0 auto;	
+}
+
+#election_progress>div {
+	position:relative;
+	top:0;
+	left:0;
+	width:40.27%;
+	height:100%;
+	background-color:#39F;	
+}
+
+/*재산*/
+
+#property {
+	position:relative;
+	width:100%;
+	max-width:1300px;
+	height:700px;
+	margin:0 auto;
+	/*background-color:#99F;*/
+}
+
+#property>ul {
+	position:relative;
+	width:80%;
+	height:auto;
+	margin:0 auto;
+	
+}
+
+#property>ul li {
+	position:relative;
+	width:100%;
+	height:50px;
+	line-height:50px;
+	border-bottom:1px dotted #999;
+	box-sizing:border-box;	
+}
+
+#property>ul li:first-child, #property>ul li:last-child {
+	font-weight:bold;	
+	border-bottom:2px solid #333;
+}
+
+#property>ul li>span {
+	position:absolute;	
+	right:0;
+}
+
+#property>h2 {
+	position:relative;
+	width:100%;
+	height:100px;
+	text-align:center;
+	font:bold 20px/100px Nanum;	
+}
+
+#property>p {
+	position:relative;
+	width:100%;
+	height:50px;
+	line-height:50px;
+	text-align:center;	
+}

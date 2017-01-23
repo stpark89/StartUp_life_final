@@ -1,0 +1,292 @@
+@charset "utf-8";
+/* CSS Document */
+
+@import url(core.css);
+
+#wrap {
+	position:relative;
+	width:100%;
+	max-width:1000px;
+	height:auto;
+	/*background-color:#9FC;	*/
+	margin:0 auto;
+}
+
+#wrap>h1 {
+	position:relative;
+	width:100%;
+	height:120px;
+	font-size:30px;
+	font-weight:bold;
+	line-height:150px;
+	/*background-color:#C63;*/
+}
+
+#wrap>hr {
+	position:absolute;
+	width:50px;
+	border:3px solid #000;
+	left:0;
+}
+
+#download {
+	
+	padding:20px;
+	box-sizing:border-box;
+	text-align:right;
+	cursor:pointer;
+}
+
+#download:hover {
+	
+	text-decoration: underline;
+}
+
+#title {
+	position:relative;
+	width:100%;
+	height:100px;
+	border-top:1px solid #ccc;
+	border-bottom:1px solid #ccc;
+	background-color:#eee;	
+	margin-top:50px;
+	box-sizing:border-box;
+}
+
+#title>h2 {
+	position:relative;
+	width:80%;
+	height:100%;
+	line-height:100px;
+	padding-left:40px;
+	box-sizing:border-box;
+	font-size:25px;
+	font-weight:bold;	
+}
+
+.nick {
+	font-size:15px;
+	font-weight:normal;
+}
+
+#title>p {
+	position:absolute;
+	top:50%;
+	transform : translateY(-50%);
+	right:40px;
+	width:20%;
+	height:50px;
+	text-align:right;
+	line-height:30px;	
+}
+
+#content {
+	position:relative;
+	width:95%;
+	height:auto;
+	padding:100px 0 100px 0;
+	box-sizing:border-box;
+	margin:0 auto;
+	line-height:25px;
+}
+
+#comm {
+	position:relative;
+	width:100%;
+}
+
+#comm>ul {
+	position:relative;
+	width:95%;
+	margin:0 auto;
+}
+
+#comm>ul>li {
+	position:relative;
+	width:100%;
+	min-height:100px;
+	box-sizing:border-box;
+	border-top:1px dotted #ccc;	
+}
+
+#comm>ul>li h4 {
+	position:relative;
+	width:80%;
+	height:50px;
+	line-height:70px;
+	font-weight:bold;
+	font-size:20px;
+	left:20px;	
+}
+
+
+#comm>ul>li p {
+	position:relative;
+	width:80%;
+	height:auto;
+	line-height:30px;
+	left:20px;
+}
+
+#comm>ul>li span {
+	position:absolute;
+	width:auto;
+	height:auto;	
+	right:20px;
+	top:20px;
+}
+
+#comm>div {
+	position:relative;
+	width:95%;
+	height:80px;
+	/*background-color:#9FF;*/
+	margin:0 auto 5px;	
+}
+
+#comm>div>div {
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	
+}
+	
+#comm textarea {
+	position:relative;
+	top:0;
+	left:0;
+	width:100%;
+	height:80px;	
+	border:1px solid #eee;
+	box-sizing:border-box;
+	padding:10px 100px 10px 10px;
+	font-family:Nanum;
+}
+
+#comm button {
+	position:absolute;
+	top:50%;
+	right:10px;
+	width:10%;
+	height:50px;
+	border-radius:5px;
+	background-color:transparent;
+	border:0;
+	font:bold 20px Nanum;
+	color:#666;
+	transform:translateY(-50%);
+	cursor:pointer;
+}
+
+#comm button:hover {
+	color:#333;	
+}
+
+.double_comm {
+	padding-left:20px;
+	box-sizing:border-box;
+}
+
+#commList textarea {
+	position:relative;
+	top:10px;
+	
+}
+
+#btArray {
+	position:relative;
+	width:100%;
+	height:100px;
+	line-height:100px;
+	text-align:right;	
+/*	background-color:#FC3;*/
+	border-top:1px solid #ccc;
+	box-sizing:border-box;
+}
+
+#btArray button {
+	width:100px;
+	height:40px;
+	background-color:transparent;
+	border:1px solid #ccc;
+	cursor:pointer;
+	font:16px Nanum;
+}
+
+#comm>ul>li ul {
+   position:absolute;
+   right:20px;
+   bottom:20px;
+   width:100px;
+   height:30px !important;
+}
+
+#comm>ul>li ul>li {
+   width:33.3333%;
+   height:100%;
+   text-align:right;
+   font:14px/30px Nanum;
+   cursor:pointer;   
+}
+
+#comm>ul>li ul>li:hover {
+   text-decoration:underline;   
+}
+
+@media only screen and (max-width:768px) {
+   
+   #title>h2 {
+      top:10px;
+      height:60px;
+      line-height:70px;
+      padding-left:20px;   
+      line-height:30px;   
+   }
+   
+   #title>p {
+      position:relative;
+      top:10px;
+      height:30px;
+      transform:none !important;   
+      width:100%;
+      text-align:left;
+      left:20px;
+   }
+   
+   #comm>ul>li h4 {
+      height:30px;
+      line-height:30px;   
+   }
+   #comm>ul>li p {
+      width:90%;
+      height:auto;
+      line-height:25px;   
+   }
+   
+   #comm>ul>li span {
+      position:relative;
+      top:0;
+      left:20px;
+   }
+   
+   #comm>ul>li ul {
+      bottom:0;
+      height:20px !important;
+   }
+   
+   #comm>ul>li ul li {
+      height:20px;
+      line-height:20px;   
+      text-align:left;
+      right:50px;
+   }
+   
+   #btArray {
+      text-align:center;   
+   }
+   
+   #btArray button {
+      width:80px;   
+   }
+}

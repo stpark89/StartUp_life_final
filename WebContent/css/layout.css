@@ -1,0 +1,43 @@
+@CHARSET "UTF-8";
+html,body { height: 100%; margin: 0; padding: 0; }
+
+/* Remove the navbar's default margin-bottom and rounded borders */
+.navbar {
+	background-color:white;
+	font: #fff0f5;
+	border: 0;
+	border-bottom: 1px solid black;
+}
+
+.row.content {
+	height: 450px
+}
+
+/* Add a gray background color and some padding to the footer */
+footer {
+	background-color: #f2f2f2;
+	padding: 25px;
+	margin-top:-1.9em;
+	height:1.9em;
+	position: absolute;
+	
+}
+
+/* Hide the carousel text when the screen is less than 600 pixels wide */
+@media ( max-width : 600px) {
+	.carousel-caption {
+		display: none;
+	}
+}
+
+.center-block {
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+}
+#ParliaDiv{
+	min-height: 100%;
+}
+
+
+

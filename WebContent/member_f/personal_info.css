@@ -1,0 +1,93 @@
+@charset "utf-8";
+/* CSS Document */
+@import url(core.css);
+
+#wrap {
+	position:relative;
+	width:100%;
+	max-width:1000px;
+	height:900px;
+	/*background-color:#9FC;	*/
+	margin:0 auto;
+}
+
+#wrap>h1 {
+	position:relative;
+	width:100%;
+	height:120px;
+	font-size:30px;
+	font-weight:bold;
+	line-height:150px;
+	/*background-color:#C63;*/
+}
+
+#wrap>hr {
+	position:absolute;
+	width:50px;
+	border:3px solid #000;
+	left:0;
+}
+
+
+#personal_tb {
+	position:relative;
+	width:100%;
+	height:auto;
+	margin-top:50px;
+	margin-bottom:30px;
+	/*background-color:#CC9;*/	
+}
+
+#personal_tb table {
+	position:relative;
+	width:100%;
+	height:auto;	
+}
+
+#personal_tb table tr {
+	width:100%;
+	height:100px;	
+}
+
+#personal_tb table th {
+	width:20%;
+	height:100px;
+	background-color:#333;
+	color:#fff;	
+	border-bottom:1px dotted #999;
+	box-sizing:border-box;
+	font-size:20px;
+}
+
+#personal_tb table td {
+	width:20%;
+	height:100px;
+	border-top:1px dotted #333;
+	padding:20px;
+	box-sizing:border-box;
+	font-size:20px;
+}
+
+#personal_tb table tr:last-child td {
+	border-bottom:1px dotted #333;
+}
+
+#personal_tb table tr:last-child th {
+		border:0;	
+}
+
+#wrap>button {
+	position:relative;
+	width:100%;
+	height:80px;
+	background-color:#999;
+	border:0;
+	color:#fff;
+	font:20px Nanum;
+	cursor:pointer;
+	transition:all 0.4s ease-out;
+}
+
+#wrap>button:hover {
+	background-color:#666;	
+}

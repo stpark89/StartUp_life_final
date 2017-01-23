@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop" 
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:task="http://www.springframework.org/schema/task"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+						   http://www.springframework.org/schema/beans/spring-beans.xsd
+                           http://www.springframework.org/schema/context 
+                           http://www.springframework.org/schema/context/spring-context.xsd
+                           http://www.springframework.org/schema/mvc
+       					   http://www.springframework.org/schema/mvc/spring-mvc.xsd
+       					   http://www.springframework.org/schema/aop 
+						   http://www.springframework.org/schema/aop/spring-aop.xsd
+						   http://www.springframework.org/schema/task
+						   http://www.springframework.org/schema/task/spring-task-3.0.xsd
+						   http://www.springframework.org/schema/tx 
+						   http://www.springframework.org/schema/tx/spring-tx.xsd">
+	
+	<mvc:annotation-driven />
+
+	<context:component-scan base-package="kr.or.com.schedule"/>
+		<task:scheduler id="Schedule" pool-size="10" />
+		<task:annotation-driven scheduler="Schedule" />
+
+	<bean id="driverManagerDataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+      <property name="driverClassName" value="oracle.jdbc.driver.OracleDriver"></property>
+      <property name="url" value="jdbc:oracle:thin:@startupdb.cj3cqea1nnv4.ap-northeast-2.rds.amazonaws.com:1521:ORCL"></property>
+      <property name="username" value="psj"></property>
+      <property name="password" value="10041004"></property>
+   </bean>
+
+   <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+      <property name="dataSource" ref="driverManagerDataSource"></property>
+      <property name="mapperLocations" value="classpath*:kr/or/com/mapper/*xml"/>
+   </bean>
+   
+   <bean id="sqlSession" class="org.mybatis.spring.SqlSessionTemplate">
+      <constructor-arg name="sqlSessionFactory" ref="sqlSessionFactory" />
+   </bean>
+	
+	
+	<!--타일즈 관련 뷰 리졸버 - 1 -->
+	<bean id="viewResolver" class="org.springframework.web.servlet.view.UrlBasedViewResolver">
+      <property name="viewClass"
+         value="org.springframework.web.servlet.view.tiles2.TilesView"></property>
+      <property name="order" value="1" />
+   </bean>
+		
+	<!-- Resolves views selected for rendering by @Controllers to .jsp resources in the /WEB-INF/views directory -->
+	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix" value="/WEB-INF/views/" />
+		<property name="suffix" value=".jsp" />
+		<property name="order" value="2"></property>
+	</bean>
+		
+   <!-- 파일업로드 관련 리졸버 -->
+   <bean id="multipartResolver"
+      class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+      <property name="maxUploadSize" value="10485760" />
+   </bean>
+	
+	<bean id="tilesConfigurer" class="org.springframework.web.servlet.view.tiles2.TilesConfigurer">
+      <property name="definitions">
+         <list>
+            <value>/WEB-INF/Tiles.xml</value>
+         </list>
+      </property>
+   </bean>
+
+	<!--암호화-->
+	<bean id="bCryptPasswordEncoder"
+      class="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder">
+      <constructor-arg name="strength" value="10"></constructor-arg>
+   </bean>
+	
+  <bean id="mailSender" class ="org.springframework.mail.javamail.JavaMailSenderImpl" >
+    <property name="host" value="smtp.gmail.com" />
+    <property name="port" value="587" />
+    <property name="defaultEncoding" value="utf-8"/>
+    <property name="username" value="stpark89@gmail.com" />
+    <property name="password" value="1068711p" />
+    <property name="javaMailProperties">
+	    <props>
+	            <prop key="mail.smtp.starttls.enable">true</prop>
+	            <prop key="mail.smtp.auth">true</prop>
+	    </props>
+    </property>
+	</bean>
+	
+	 <bean id="email" class="kr.or.com.email.EmailDTO"></bean>
+    
+    <bean id="emailSender" class="kr.or.com.email.EmailSender"></bean>
+
+	
+	<mvc:resources location="/WEB-INF/resource/js/" mapping="/js/**" />
+	 <bean name="jsonview" class="org.springframework.web.servlet.view.json.MappingJackson2JsonView" />
+
+  	
+</beans>
