@@ -16,6 +16,7 @@
 <title>생활정치</title>
 </head>
 <body>
+		
 	<input type="hidden" id="check_Id_value">
 	<input type="hidden" id="hidden_nick">
 	<aside id="login_bg">
